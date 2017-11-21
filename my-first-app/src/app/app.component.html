@@ -25,16 +25,22 @@
 
 <hr>
 
-<button class="btn btn-primary" [disabled]="allowNewServer">
+<button 
+  class="btn btn-primary" 
+  [disabled]="!allowNewServer"
+  (click)="onServerCreation();"
+>
   Add Server
 </button>
 
-<p>Disabled: {{ allowNewServer }}</p>
+<p>{{ serverStatus }}</p>
 
-<p [innerText]="allowNewServer"></p>
+<p>Disabled: {{ !allowNewServer }}</p>
+
+<p [innerText]="!allowNewServer"></p>
 
 <!-- Interpolation with Property binding. Inner string interpolation gets priority -->
-<p [innerText]="allowNewServer">Disabled: {{ allowNewServer }}</p>
+<p [innerText]="allowNewServer">Disabled: {{ !allowNewServer }}</p>
 
 <hr>
 

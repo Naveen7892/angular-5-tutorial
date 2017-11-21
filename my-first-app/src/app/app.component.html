@@ -29,6 +29,13 @@
   Add Server
 </button>
 
+<p>Disabled: {{ allowNewServer }}</p>
+
+<p [innerText]="allowNewServer"></p>
+
+<!-- Interpolation with Property binding. Inner string interpolation gets priority -->
+<p [innerText]="allowNewServer">Disabled: {{ allowNewServer }}</p>
+
 <hr>
 
 <!-- Component selector as element -->

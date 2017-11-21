@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
     styles: [`
         p {
             border: 3px solid red;
+            padding: 10px;
+            background-color: mistyrose;
         }
     `]
 

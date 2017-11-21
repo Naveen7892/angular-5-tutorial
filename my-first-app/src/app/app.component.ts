@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   onServerCreation() {
-    this.serverStatus = "Server is created!";
+    this.serverStatus = "Server is created! Server name is " + this.serverName;
   }
 
   onUpdateServerName2(event: any) {

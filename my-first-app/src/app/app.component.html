@@ -25,6 +25,12 @@
 
 <hr>
 
+<input
+  type="text"
+  (input)="onUpdateServerName($event); onUpdateServerName2($event);"
+>
+<p [innerText]="serverName"></p>
+
 <button 
   class="btn btn-primary" 
   [disabled]="!allowNewServer"

@@ -25,9 +25,21 @@
 
 <hr>
 
+<label>Server Name: (Event binding) </label>
+
 <input
   type="text"
+  class="form-control"
   (input)="onUpdateServerName($event); onUpdateServerName2($event);"
+>
+<p [innerText]="serverName"></p>
+
+
+<label>Server Name: (Two way binding)</label>
+<input
+type="text"
+class="form-control"
+[(ngModel)]="serverName"
 >
 <p [innerText]="serverName"></p>
 

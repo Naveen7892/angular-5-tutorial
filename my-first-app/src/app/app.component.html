@@ -50,7 +50,13 @@ class="form-control"
   Add Server
 </button>
 
-<p>{{ serverStatus }}</p>
+<p *ngIf="serverCreated && serverName; else noServer">Server was created with Server name: {{ serverName }}</p>
+
+<ng-template #noServer>
+  <p>
+    No server created yet!
+  </p>
+</ng-template>
 
 <p>Disabled: {{ !allowNewServer }}</p>
 

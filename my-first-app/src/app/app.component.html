@@ -68,7 +68,9 @@ class="form-control"
 <hr>
 
 <!-- Component selector as element -->
-<app-servers></app-servers>
+<!-- <app-servers></app-servers> -->
+
+<app-server *ngFor="let server of servers"></app-server>
 
 <!-- Component selector as attribute -->
 <!-- <div app-servers=""></div> -->

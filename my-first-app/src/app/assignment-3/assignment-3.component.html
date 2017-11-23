@@ -1,0 +1,26 @@
+<button 
+    class="btn btn-primary"
+    (click)="isPasswordVisible = !isPasswordVisible; logButtonClicks();"
+>
+    Display Details
+</button>
+
+<hr>
+
+<p *ngIf="isPasswordVisible; else noPasswordVisibility">
+    Your Password: "Yoda, the Great"
+</p>
+
+<ng-template #noPasswordVisibility>
+    <p>
+        Your Password: ********
+    </p>
+</ng-template>
+
+<p 
+    *ngFor="let log of buttonClickLogs; let i = index;"
+    [ngStyle]="{ backgroundColor: i >= 4 ? 'blue': 'transparent' }"
+    [ngClass]="{ moreLogs: i >= 4 }"
+>
+    {{ log }}
+</p>
